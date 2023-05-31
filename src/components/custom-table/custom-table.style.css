@@ -1,0 +1,20 @@
+.custom-table .ant-table-thead > tr > th {
+  background-color: hsl(222, 48%, 95%);
+  border-style: solid;
+  border-top: solid 1px #c6d5ff;
+  border-bottom: solid 1px #c6d5ff;
+  border-left: 0;
+  border-right: 0;
+  font-weight: 500;
+  color: #1a1b4c;
+}
+
+.custom-table .ant-table-thead > tr > th.ant-table-column-sort,
+.custom-table .ant-table-thead > tr > th.ant-table-column-has-sorters:hover {
+  background: #cdd8f6;
+}
+
+.custom-table .ant-table-column-title {
+  font-weight: 500;
+  color: #1a1b4c;
+}

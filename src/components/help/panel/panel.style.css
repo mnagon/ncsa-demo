@@ -1,0 +1,27 @@
+.help-panel.ant-collapse-item {
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.help-panel .ant-collapse-header {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.help-panel .ant-collapse-content-box {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.help-panel .ant-collapse-header[aria-expanded="true"] .help-panel__icon {
+  transform: rotate(-180deg);
+}
+.help-panel .ant-collapse-header-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.help-panel
+  .ant-collapse-header[aria-expanded="true"]
+  .ant-collapse-header-text,
+.help-panel .ant-collapse-header[aria-expanded="true"] .help-panel__icon {
+  color: #25286f;
+}
