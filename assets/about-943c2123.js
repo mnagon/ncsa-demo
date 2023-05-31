@@ -1,0 +1,1 @@
+import{j as r,C as e,T as s}from"./index-b3792167.js";import{r as o}from"./requireAuth-a98b14e9.js";const d=()=>r.jsxs(e,{children:[r.jsx("header",{className:"border-b border-l-0 border-r-0 border-t-0 border-dashed border-[#BFBFC7] px-10 py-5",children:r.jsx(s,{children:"About NCSA CTI"})}),r.jsx("div",{className:" h-96"})]}),b=o(d);export{b as default};
