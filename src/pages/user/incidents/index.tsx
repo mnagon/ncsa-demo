@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Row, Col, Input, Select, Button, Space } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import Icon, { SearchOutlined } from "@ant-design/icons";
@@ -12,7 +13,7 @@ import { Eye, Trash } from "../../../components/icons";
 import { ConfirmModal } from "../../../components/confirm-modal";
 
 import {
-  IncidentTypeOptions,
+  incidentTypeOptions,
   severityLevelOptions,
 } from "../../../constants/incident";
 import { incidentList } from "../../../mocks/incidents";
@@ -68,7 +69,7 @@ const UserIncidents: React.FC = () => {
       {
         title: "Actions",
         key: "actions",
-        render: (_, record) => (
+        render: () => (
           <Space>
             <Button
               icon={<Icon component={Eye} />}
@@ -103,7 +104,7 @@ const UserIncidents: React.FC = () => {
           />
         </Col>
         <Col xs={12} lg={5}>
-          <label className="mb-1 block">Incident type:</label>
+          <label className="mb-1 block font-semibold">Incident type:</label>
           <Select
             size="large"
             className="w-full"
@@ -112,11 +113,11 @@ const UserIncidents: React.FC = () => {
             placeholder="-Select-"
             optionFilterProp="children"
             filterOption={filterOption}
-            options={IncidentTypeOptions}
+            options={incidentTypeOptions}
           />
         </Col>
         <Col xs={12} lg={5}>
-          <label className="mb-1 block">Severity level:</label>
+          <label className="mb-1 block font-semibold">Severity level:</label>
           <Select
             size="large"
             className="w-full"
@@ -129,9 +130,11 @@ const UserIncidents: React.FC = () => {
           />
         </Col>
         <Col xs={24} lg={7} className="flex justify-end">
-          <Button type="primary" size="large">
-            + Submit Incident Case
-          </Button>
+          <Link to="/incidents/create">
+            <Button type="primary" size="large">
+              + Submit Incident Case
+            </Button>
+          </Link>
         </Col>
       </Row>
       <CustomTable

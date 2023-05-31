@@ -4,6 +4,16 @@ import type { TableProps } from "antd";
 
 import "./custom-table.style.css";
 
+export const CustomTHead: React.FC<
+  React.PropsWithChildren<{ className?: string }>
+> = ({ className, children }) => {
+  return <div className={`custom-thead ${className}`}>{children}</div>;
+};
+
+CustomTHead.defaultProps = {
+  className: "",
+};
+
 export const CustomTable: React.FC<TableProps<any>> = (props) => {
   return (
     <Table

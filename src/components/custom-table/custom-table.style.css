@@ -9,9 +9,14 @@
   color: #1a1b4c;
 }
 
+.custom-table .custom-thead {
+  font-weight: 500;
+  color: #1a1b4c;
+}
+
 .custom-table .ant-table-thead > tr > th.ant-table-column-sort,
 .custom-table .ant-table-thead > tr > th.ant-table-column-has-sorters:hover {
-  background: #cdd8f6;
+  background: #eef3ff;
 }
 
 .custom-table .ant-table-column-title {

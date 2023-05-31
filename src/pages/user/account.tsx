@@ -20,10 +20,10 @@ const UserAccount: React.FC = () => {
       <Card className="mb-8">
         <CardBody>
           <h2 className="mt-0 text-2xl font-semibold text-primary">Profile</h2>
-          <Form form={profileForm} layout="vertical" onFinish={handleSubmit}>
+          <Form form={profileForm} onFinish={handleSubmit}>
             <Row gutter={[20, 20]}>
               <Col xs={24} lg={12}>
-                <label className="mb-1 block font-semibold after:ml-1 after:text-red-500 after:content-['*']">
+                <label className="mb-1.5 block font-semibold after:ml-1 after:text-red-500 after:content-['*']">
                   First name
                 </label>
                 <Form.Item
@@ -31,14 +31,14 @@ const UserAccount: React.FC = () => {
                   rules={[{ required: true, message: "กรุณาระบุชื่อ" }]}
                 >
                   <Input
-                    className="p-3 "
+                    className="p-2 "
                     placeholder="First name"
                     size="large"
                   />
                 </Form.Item>
               </Col>
               <Col xs={24} lg={12}>
-                <label className="mb-1 block font-semibold after:ml-1 after:text-red-500 after:content-['*']">
+                <label className="mb-1.5 block font-semibold after:ml-1 after:text-red-500 after:content-['*']">
                   Last name
                 </label>
                 <Form.Item
@@ -46,14 +46,14 @@ const UserAccount: React.FC = () => {
                   rules={[{ required: true, message: "กรุณาระบุนามสกุล" }]}
                 >
                   <Input
-                    className="p-3 "
+                    className="p-2 "
                     placeholder="Last name"
                     size="large"
                   />
                 </Form.Item>
               </Col>
               <Col xs={24} lg={12}>
-                <label className="mb-1 block font-semibold after:ml-1 after:text-red-500 after:content-['*']">
+                <label className="mb-1.5 block font-semibold after:ml-1 after:text-red-500 after:content-['*']">
                   Email address
                 </label>
                 <Form.Item
@@ -63,7 +63,7 @@ const UserAccount: React.FC = () => {
                   ]}
                 >
                   <Input
-                    className="p-3 "
+                    className="p-2 "
                     placeholder="Email address"
                     size="large"
                     disabled
@@ -71,10 +71,12 @@ const UserAccount: React.FC = () => {
                 </Form.Item>
               </Col>
               <Col xs={24} lg={12}>
-                <label className="mb-1 block font-semibold">Phone number</label>
+                <label className="mb-1.5 block font-semibold">
+                  Phone number
+                </label>
                 <Form.Item name="phone">
                   <Input
-                    className="p-3 "
+                    className="p-2 "
                     placeholder="xxx-xxx-xxxx"
                     size="large"
                   />
@@ -86,7 +88,7 @@ const UserAccount: React.FC = () => {
         <Divider className="m-0" />
         <CardBody className="flex justify-end">
           <Button
-            className="block h-14 px-8 text-2xl"
+            className="block h-12 px-8 text-2xl"
             type="primary"
             htmlType="submit"
           >
@@ -99,10 +101,10 @@ const UserAccount: React.FC = () => {
           <h2 className="mt-0 text-2xl font-semibold text-primary">
             Reset Password
           </h2>
-          <Form form={passwordForm} layout="vertical" onFinish={handleSubmit}>
+          <Form form={passwordForm} onFinish={handleSubmit}>
             <Row gutter={[20, 20]}>
               <Col xs={24} lg={12}>
-                <label className="mb-1 block font-semibold after:ml-1 after:text-red-500 after:content-['*']">
+                <label className="mb-1.5 block font-semibold after:ml-1 after:text-red-500 after:content-['*']">
                   Old Password
                 </label>
                 <Form.Item
@@ -113,7 +115,7 @@ const UserAccount: React.FC = () => {
                 >
                   <Input
                     type="password"
-                    className="p-3 "
+                    className="p-2 "
                     placeholder="Old Password"
                     size="large"
                   />
@@ -121,31 +123,30 @@ const UserAccount: React.FC = () => {
               </Col>
               <Col xs={24} lg={12} />
               <Col xs={24} lg={12}>
-                <label className="mb-1 block font-semibold after:ml-1 after:text-red-500 after:content-['*']">
+                <label className="mb-1.5 block font-semibold after:ml-1 after:text-red-500 after:content-['*']">
                   New Password
                 </label>
                 <Form.Item
-                  name="email"
+                  name="new-password"
                   rules={[
                     { required: true, message: "กรุณาระบุ New Password" },
                   ]}
                 >
                   <Input
                     type="password"
-                    className="p-3 "
+                    className="p-2 "
                     placeholder="New Password *"
                     size="large"
-                    disabled
                   />
                 </Form.Item>
               </Col>
               <Col xs={24} lg={12} />
               <Col xs={24} lg={12}>
-                <label className="mb-1 block font-semibold after:ml-1 after:text-red-500 after:content-['*']">
+                <label className="mb-1.5 block font-semibold after:ml-1 after:text-red-500 after:content-['*']">
                   Confirm New Password
                 </label>
                 <Form.Item
-                  name="email"
+                  name="confirm-password"
                   rules={[
                     {
                       required: true,
@@ -154,10 +155,9 @@ const UserAccount: React.FC = () => {
                   ]}
                 >
                   <Input
-                    className="p-3 "
+                    className="p-2 "
                     placeholder="Confirm New Password"
                     size="large"
-                    disabled
                   />
                 </Form.Item>
               </Col>
@@ -168,7 +168,7 @@ const UserAccount: React.FC = () => {
         <Divider className="m-0" />
         <CardBody className="flex justify-end">
           <Button
-            className="block h-14 px-8 text-2xl"
+            className="block h-12 px-8 text-2xl"
             type="primary"
             htmlType="submit"
           >

@@ -1,5 +1,5 @@
 import React from "react";
-import { Dropdown, Space, Tooltip } from "antd";
+import { Dropdown, Tooltip } from "antd";
 import type { MenuProps } from "antd";
 import Icon from "@ant-design/icons";
 import { Link, useLocation } from "react-router-dom";

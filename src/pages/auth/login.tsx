@@ -37,7 +37,7 @@ const AuthLogin: React.FC = () => {
         <h2 className="mb-8 text-center text-4xl font-semibold text-primary">
           User Login
         </h2>
-        <Form form={form} layout="vertical" onFinish={handleSubmit}>
+        <Form form={form} onFinish={handleSubmit}>
           <label className="mb-1 block font-semibold">Email</label>
           <Form.Item
             name="email"

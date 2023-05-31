@@ -7,5 +7,7 @@ export const theme: ThemeConfig = {
     colorPrimary: "#25286F",
     borderRadius: 4,
     fontWeightStrong: 300,
+    colorBorder: "#BEBEBE",
+    colorSplit: "#BEBEBE",
   },
 };
