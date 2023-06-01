@@ -12,9 +12,11 @@ import { APIKeyStatus } from "../../components/api-key";
 import { API } from "../../components/icons";
 import { PageSize } from "../../components/page-size";
 import { CustomPagination } from "../../components/custom-pagination";
+import { ConfirmModal } from "../../components/confirm-modal";
 
 const APIKey: React.FC = () => {
   const [currentpage, setCurrentPage] = React.useState(1);
+  const [showDeleteModal, setShowDeleteModal] = React.useState(false);
 
   const columns = React.useMemo<ColumnsType<any>>(() => {
     return [
@@ -85,6 +87,7 @@ const APIKey: React.FC = () => {
               className="border-0 shadow-none"
             />
             <Button
+              onClick={() => setShowDeleteModal(true)}
               icon={<Icon component={Trash} />}
               shape="circle"
               className="border-0 shadow-none"
@@ -111,10 +114,14 @@ const APIKey: React.FC = () => {
           prefix={<SearchOutlined />}
         />
         <Button type="primary" size="large">
-          + Generate API Key
+          + Add New Incident Case
         </Button>
       </div>
-      <CustomTable dataSource={userApiKeyList} columns={columns} />
+      <CustomTable
+        className="mb-6"
+        dataSource={userApiKeyList}
+        columns={columns}
+      />
       <div className="flex items-baseline justify-between">
         <PageSize total={30} current={currentpage} pageSize={10} />
         <CustomPagination
@@ -124,6 +131,31 @@ const APIKey: React.FC = () => {
           onChange={setCurrentPage}
         />
       </div>
+
+      <ConfirmModal
+        open={showDeleteModal}
+        headline="Delete API Key"
+        message="Are you sure you want to delete this API Key?"
+        content={
+          <div className="flex justify-center">
+            <div>
+              <p className="font-normal">
+                Name:{" "}
+                <strong className="font-normal text-primary">Support</strong>
+              </p>
+              <p className="font-normal">
+                API Key:{" "}
+                <strong className="font-normal text-primary">
+                  f2a04524-d641-4b00-91a3-11a61d82693e
+                </strong>
+              </p>
+            </div>
+          </div>
+        }
+        confirmText="Delete"
+        onCancel={() => setShowDeleteModal(false)}
+        onOk={() => setShowDeleteModal(false)}
+      />
     </>
   );
 };

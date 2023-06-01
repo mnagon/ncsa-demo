@@ -25,7 +25,7 @@ export const ConfirmModal: React.FC<ConfirmModalProps> = (props) => {
       <h3 className="mb-2 mt-8 text-center text-2xl font-semibold text-primary">
         {headline}
       </h3>
-      <Typography.Paragraph className="mb-8 text-center">
+      <Typography.Paragraph className="mb-8 text-center font-normal">
         {message}
       </Typography.Paragraph>
       {content}

@@ -8,8 +8,8 @@ import IMAGE_PLACEHOLDER from "../../assets/images/image-placeholder.png";
 const UserAbount: React.FC = () => {
   return (
     <Card>
-      <header className="border-b border-l-0 border-r-0 border-t-0 border-dashed border-[#BFBFC7] px-10 py-6">
-        <Title className="mb-0">About NCSA CTI</Title>
+      <header className="border-b border-l-0 border-r-0 border-t-0 border-dashed border-[#BFBFC7] px-10 pb-3 pt-6">
+        <Title>About NCSA CTI</Title>
       </header>
       <Card className="border-0 p-10">
         <div className="mb-8 flex flex-col gap-5 md:flex-row md:gap-8">

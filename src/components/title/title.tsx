@@ -16,3 +16,7 @@ export const Title: React.FC<React.PropsWithChildren<CardProps>> = ({
     </h1>
   );
 };
+
+Title.defaultProps = {
+  className: "",
+};

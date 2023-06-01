@@ -6,6 +6,7 @@ export const incidentList = [
     level: "Low",
     date: "23-03-12 17:34",
     status: "ACCEPTED",
+    createBy: "Thitiwat Wongsa",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const incidentList = [
     level: "Critical",
     date: "23-03-12 17:34",
     status: "ACCEPTED",
+    createBy: "Thitiwat Wongsa",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const incidentList = [
     level: "Medium",
     date: "23-03-12 17:34",
     status: "REJECTED",
+    createBy: "Thitiwat Wongsa",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const incidentList = [
     level: "Medium",
     date: "23-03-12 17:34",
     status: "PENDING",
+    createBy: "Thitiwat Wongsa",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const incidentList = [
     level: "High",
     date: "23-03-12 17:34",
     status: "REJECTED",
+    createBy: "Thitiwat Wongsa",
   },
   {
     id: 6,
@@ -46,5 +51,6 @@ export const incidentList = [
     level: "Critical",
     date: "23-03-12 17:34",
     status: "PENDING",
+    createBy: "Thitiwat Wongsa",
   },
 ];
