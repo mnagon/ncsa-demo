@@ -1,1 +1,0 @@
-import{j as r,T as s,I as a}from"./index-3fca0d09.js";import{D as o}from"./icons-0fca83a9.js";import{r as e}from"./requireAdmin-e49232d2.js";const m=()=>r.jsx(r.Fragment,{children:r.jsx("header",{children:r.jsxs(s,{children:[r.jsx(a,{className:"mr-3",component:o}),"Admin Dashboard"]})})}),i=e(m);export{i as default};

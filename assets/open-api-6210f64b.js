@@ -1,1 +1,0 @@
-import{j as r,C as e,T as s}from"./index-3fca0d09.js";import{r as d}from"./requireAuth-4403cb50.js";const o=()=>r.jsxs(e,{children:[r.jsx("header",{className:"border-b border-l-0 border-r-0 border-t-0 border-dashed border-[#BFBFC7] px-10 py-5",children:r.jsx(s,{children:"OpenAPI"})}),r.jsx("div",{className:" h-96"})]}),i=d(o);export{i as default};
