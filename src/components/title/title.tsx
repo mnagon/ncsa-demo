@@ -1,10 +1,10 @@
 import React from "react";
 
-export type CardProps = {
+export type TitleProps = {
   className?: string;
 };
 
-export const Title: React.FC<React.PropsWithChildren<CardProps>> = ({
+export const Title: React.FC<React.PropsWithChildren<TitleProps>> = ({
   className,
   children,
 }) => {

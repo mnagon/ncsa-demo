@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   Row,
   Col,
@@ -130,11 +129,9 @@ const AdminAlerts: React.FC = () => {
           />
         </Col>
         <Col xs={24} lg={10} className="flex justify-end">
-          <Link to="/incidents/create">
-            <Button type="primary" size="large">
-              + Submit Incident Case
-            </Button>
-          </Link>
+          <Button type="primary" size="large">
+            + Add Alert
+          </Button>
         </Col>
       </Row>
       <CustomTable className="mb-6" dataSource={alertList} columns={columns} />

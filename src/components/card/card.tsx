@@ -10,7 +10,7 @@ export const Card: React.FC<React.PropsWithChildren<CardProps>> = ({
 }) => {
   return (
     <div
-      className={`rounded border border-solid border-[#E7E7EF] bg-white shadow ${className}`}
+      className={`rounded-lg border border-solid border-[#E7E7EF] bg-white shadow ${className}`}
     >
       {children}
     </div>

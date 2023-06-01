@@ -1,0 +1,27 @@
+.faqs-editor-panel .ant-collapse-header {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.faqs-editor-panel .ant-collapse-content-box {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.faqs-editor-panel
+  .ant-collapse-header[aria-expanded="true"]
+  .faqs-editor-panel__icon {
+  transform: rotate(-180deg);
+}
+.faqs-editor-panel .ant-collapse-header-text {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.faqs-editor-panel
+  .ant-collapse-header[aria-expanded="true"]
+  .ant-collapse-header-text,
+.faqs-editor-panel
+  .ant-collapse-header[aria-expanded="true"]
+  .faqs-editor-panel__icon {
+  color: #25286f;
+}

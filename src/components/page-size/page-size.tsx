@@ -23,7 +23,7 @@ export const PageSize: React.FC<PageSizeProps> = (props) => {
   return (
     <Space>
       <Select defaultValue={pageSize} options={sizeOptions} />{" "}
-      <span>Show 1-10 of 100 items</span>
+      <span className="text-[#757575]">Show 1-10 of 100 items</span>
     </Space>
   );
 };

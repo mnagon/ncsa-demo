@@ -153,7 +153,7 @@ const AdminIncidents: React.FC = () => {
           />
         </Col>
         <Col xs={24} lg={7} className="flex justify-end">
-          <Link to="/incidents/create">
+          <Link to="/admin/incidents/create">
             <Button type="primary" size="large">
               + Submit Incident Case
             </Button>
