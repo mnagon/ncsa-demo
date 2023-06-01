@@ -1,0 +1,1 @@
+import{R as t,j as e,c as o,f as r}from"./index-3fca0d09.js";const n=a=>{const{pageSize:s}=a,l=t.useMemo(()=>[{value:10,label:10},{value:25,label:25},{value:50,label:50},{value:100,label:100}],[]);return e.jsxs(o,{children:[e.jsx(r,{defaultValue:s,options:l})," ",e.jsx("span",{children:"Show 1-10 of 100 items"})]})};n.defaultProps={pageSize:10,current:1};export{n as P};

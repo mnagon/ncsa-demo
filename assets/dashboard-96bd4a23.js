@@ -1,0 +1,1 @@
+import{j as r,T as s}from"./index-3fca0d09.js";import{r as e}from"./requireAuth-4403cb50.js";const a=()=>r.jsx(r.Fragment,{children:r.jsx("header",{children:r.jsx(s,{children:"Dashboard"})})}),d=e(a);export{d as default};
