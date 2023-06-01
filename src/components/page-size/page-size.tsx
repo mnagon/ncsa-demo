@@ -9,7 +9,7 @@ export type PageSizeProps = {
 };
 
 export const PageSize: React.FC<PageSizeProps> = (props) => {
-  const { total, pageSize, current, onChange } = props;
+  const { pageSize } = props;
 
   const sizeOptions = React.useMemo(() => {
     return [

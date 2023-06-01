@@ -77,7 +77,7 @@ const APIKey: React.FC = () => {
       {
         title: "Actions",
         key: "actions",
-        render: (_, record) => (
+        render: () => (
           <Space>
             <Button
               icon={<Icon component={Edit} />}
