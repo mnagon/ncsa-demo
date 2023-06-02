@@ -18,6 +18,7 @@ const HelpContact = React.lazy(() => import("../pages/user/help/contact"));
 const HelpHowto = React.lazy(() => import("../pages/user/help/how-to"));
 const Account = React.lazy(() => import("../pages/user/account"));
 const APIKey = React.lazy(() => import("../pages/user/api-key"));
+const IOC = React.lazy(() => import("../pages/user/ioc"));
 
 const userRouters: RouterType[] = [
   {
@@ -84,6 +85,11 @@ const userRouters: RouterType[] = [
     path: "api-key",
     element: <APIKey />,
     title: "User API Key",
+  },
+  {
+    path: "ioc/:id",
+    element: <IOC />,
+    title: "User IOC",
   },
 ];
 

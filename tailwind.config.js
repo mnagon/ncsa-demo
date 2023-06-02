@@ -10,6 +10,10 @@ export default {
       colors: {
         primary: "#25286F",
       },
+      fontFamily: {
+        kanit: ["Kanit", "sans-serif"],
+        pt: ["PT Mono", "monospace"],
+      },
     },
   },
   plugins: [],

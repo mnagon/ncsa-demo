@@ -6,7 +6,7 @@ import Icon, { SearchOutlined } from "@ant-design/icons";
 
 import { Title } from "../../../components/title";
 import { SeverityLevel, IncidentStatus } from "../../../components/incident";
-import { CustomTable } from "../../../components/custom-table";
+import { CustomTHead, CustomTable } from "../../../components/custom-table";
 import { CustomPagination } from "../../../components/custom-pagination";
 import { PageSize } from "../../../components/page-size";
 import { Eye, Trash } from "../../../components/icons";
@@ -40,13 +40,15 @@ const UserIncidents: React.FC = () => {
         sorter: true,
       },
       {
-        title: "Severity level",
+        title: (
+          <CustomTHead className="text-center">Severity level</CustomTHead>
+        ),
         dataIndex: "level",
         key: "level",
         render: (level) => (
-          <>
+          <div className="flex justify-center">
             <SeverityLevel level={level} />
-          </>
+          </div>
         ),
       },
       {

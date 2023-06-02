@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { Skeleton } from "antd";
 
 import { Router as RouterType } from "../types";
 import authRouters from "./auth";
@@ -58,7 +59,7 @@ const Router = () => {
         path={`/${path}`}
         element={
           <motion.div {...transitionProps}>
-            <React.Suspense fallback={<>Loading...</>}>
+            <React.Suspense fallback={<Skeleton active />}>
               {element}
             </React.Suspense>
           </motion.div>

@@ -1,0 +1,8 @@
+.custom-slider-range .ant-slider-handle:focus::after {
+  box-shadow: 0 0 0 8px rgba(37, 40, 111, 0.2) !important;
+}
+
+.custom-slider-range .ant-slider-handle::after {
+  background-color: #4246e9 !important;
+  box-shadow: 0 0 0 2px #4246e9 !important;
+}

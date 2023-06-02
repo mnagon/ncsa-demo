@@ -5,13 +5,14 @@ import { Search, Filter } from "../../components/icons";
 import { requireAuth } from "../../utils";
 import { Title } from "../../components/title";
 import { Card } from "../../components/card";
-import { SearchPreview } from "../../components/search-preview";
+import { SearchPreview, SearchFilterModal } from "../../components/search";
 import { searchList } from "../../mocks/search";
 import { CustomPagination } from "../../components/custom-pagination";
 import { PageSize } from "../../components/page-size";
 
 const UserSearch: React.FC = () => {
   const [currentpage, setCurrentPage] = React.useState(1);
+  const [showFilterModal, setShowFilterModal] = React.useState(false);
 
   return (
     <>
@@ -35,6 +36,7 @@ const UserSearch: React.FC = () => {
           สามารถค้นหาได้ทีละหลายรายการ (กด Spacebar เพื่อใส่รายการต่อไป)
         </Typography.Paragraph>
         <Button
+          onClick={() => setShowFilterModal(true)}
           className="inline-flex items-center self-start md:self-baseline"
           type="text"
         >
@@ -42,7 +44,12 @@ const UserSearch: React.FC = () => {
           <span className="font-medium text-primary">Advanced Search</span>
         </Button>
       </div>
-      <Title>1,150 search results for “python”</Title>
+      <Typography.Paragraph
+        className="text-3xl font-semibold text-primary"
+        style={{ marginBottom: 12 }}
+      >
+        1,150 search results for “python”
+      </Typography.Paragraph>
       <Card className="mb-6 p-10 pb-6">
         {searchList.map((search) => (
           <SearchPreview key={search.id} {...search} />
@@ -57,6 +64,12 @@ const UserSearch: React.FC = () => {
           onChange={setCurrentPage}
         />
       </div>
+
+      <SearchFilterModal
+        open={showFilterModal}
+        onCancel={() => setShowFilterModal(false)}
+        onOk={() => setShowFilterModal(false)}
+      />
     </>
   );
 };

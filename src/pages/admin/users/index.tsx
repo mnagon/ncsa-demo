@@ -13,7 +13,7 @@ import { filterOption, requireAdmin } from "../../../utils";
 import { Title } from "../../../components/title";
 import { roleOptions } from "../../../constants/user";
 import { userList } from "../../../mocks/user";
-import { Edit, Trash } from "../../../components/icons";
+import { Eye, Trash } from "../../../components/icons";
 import { Role, UserStatus } from "../../../components/user";
 
 const AdminUsers: React.FC = () => {
@@ -73,11 +73,13 @@ const AdminUsers: React.FC = () => {
         key: "actions",
         render: () => (
           <Space>
-            <Button
-              icon={<Icon component={Edit} />}
-              shape="circle"
-              className="border-0 shadow-none"
-            />
+            <Link to="/admin/users/update/user-id">
+              <Button
+                icon={<Icon component={Eye} />}
+                shape="circle"
+                className="border-0 shadow-none"
+              />
+            </Link>
             <Button
               onClick={() => setShowDeleteModal(true)}
               icon={<Icon component={Trash} />}

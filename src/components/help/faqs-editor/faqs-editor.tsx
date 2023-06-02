@@ -8,6 +8,7 @@ import { Card } from "../../card";
 type Mode = "edit" | "view";
 
 export type FaqsEditorProps = {
+  title: string;
   value: { question: string; answer: string };
   onChange?: (form: { question: string; answer: string }) => void;
   onDelete?: () => void;
@@ -15,6 +16,7 @@ export type FaqsEditorProps = {
 
 export const FaqsEditor: React.FC<FaqsEditorProps> = (props) => {
   const {
+    title,
     value: { question, answer },
     onChange,
     onDelete,
@@ -32,7 +34,7 @@ export const FaqsEditor: React.FC<FaqsEditorProps> = (props) => {
     <Card className="px-8 py-2">
       <Collapse ghost>
         <Collapse.Panel
-          header="somehting"
+          header={title}
           key="1"
           className="faqs-editor-panel"
           showArrow={false}

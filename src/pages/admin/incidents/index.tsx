@@ -46,13 +46,15 @@ const AdminIncidents: React.FC = () => {
         sorter: true,
       },
       {
-        title: "Severity level",
+        title: (
+          <CustomTHead className="text-center">Severity level</CustomTHead>
+        ),
         dataIndex: "level",
         key: "level",
         render: (level) => (
-          <>
+          <div className="flex justify-center">
             <SeverityLevel level={level} />
-          </>
+          </div>
         ),
       },
       {

@@ -30,11 +30,7 @@ const UserAccount: React.FC = () => {
                   name="first-name"
                   rules={[{ required: true, message: "กรุณาระบุชื่อ" }]}
                 >
-                  <Input
-                    className="p-2 "
-                    placeholder="First name"
-                    size="large"
-                  />
+                  <Input placeholder="First name" size="large" />
                 </Form.Item>
               </Col>
               <Col xs={24} lg={12}>
@@ -45,11 +41,7 @@ const UserAccount: React.FC = () => {
                   name="last-name"
                   rules={[{ required: true, message: "กรุณาระบุนามสกุล" }]}
                 >
-                  <Input
-                    className="p-2 "
-                    placeholder="Last name"
-                    size="large"
-                  />
+                  <Input placeholder="Last name" size="large" />
                 </Form.Item>
               </Col>
               <Col xs={24} lg={12}>
@@ -62,12 +54,7 @@ const UserAccount: React.FC = () => {
                     { required: true, message: "กรุณาระบุ Email address" },
                   ]}
                 >
-                  <Input
-                    className="p-2 "
-                    placeholder="Email address"
-                    size="large"
-                    disabled
-                  />
+                  <Input placeholder="Email address" size="large" disabled />
                 </Form.Item>
               </Col>
               <Col xs={24} lg={12}>
@@ -75,11 +62,7 @@ const UserAccount: React.FC = () => {
                   Phone number
                 </label>
                 <Form.Item name="phone">
-                  <Input
-                    className="p-2 "
-                    placeholder="xxx-xxx-xxxx"
-                    size="large"
-                  />
+                  <Input placeholder="xxx-xxx-xxxx" size="large" />
                 </Form.Item>
               </Col>
             </Row>
@@ -88,7 +71,7 @@ const UserAccount: React.FC = () => {
         <Divider className="m-0" />
         <CardBody className="flex justify-end">
           <Button
-            className="block h-12 px-8 text-2xl"
+            className="block h-10 px-6 text-xl"
             type="primary"
             htmlType="submit"
           >
@@ -115,7 +98,6 @@ const UserAccount: React.FC = () => {
                 >
                   <Input
                     type="password"
-                    className="p-2 "
                     placeholder="Old Password"
                     size="large"
                   />
@@ -134,7 +116,6 @@ const UserAccount: React.FC = () => {
                 >
                   <Input
                     type="password"
-                    className="p-2 "
                     placeholder="New Password *"
                     size="large"
                   />
@@ -154,11 +135,7 @@ const UserAccount: React.FC = () => {
                     },
                   ]}
                 >
-                  <Input
-                    className="p-2 "
-                    placeholder="Confirm New Password"
-                    size="large"
-                  />
+                  <Input placeholder="Confirm New Password" size="large" />
                 </Form.Item>
               </Col>
               <Col xs={24} lg={12} />
@@ -168,7 +145,7 @@ const UserAccount: React.FC = () => {
         <Divider className="m-0" />
         <CardBody className="flex justify-end">
           <Button
-            className="block h-12 px-8 text-2xl"
+            className="block h-10 px-6 text-xl"
             type="primary"
             htmlType="submit"
           >

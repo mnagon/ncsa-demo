@@ -1,3 +1,3 @@
 export * from "./severity-level";
-export * from "./incident-status";
-export * from "./incident-form";
+export * from "./status";
+export * from "./form";

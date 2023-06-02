@@ -59,6 +59,7 @@ const AdminHelpFaqs: React.FC = () => {
       <Space direction="vertical" className="mb-5 w-full" size={20}>
         {faqs.map((faq, index) => (
           <FaqsEditor
+            title={`Question ${index + 1}`}
             key={index}
             value={faq}
             onChange={(e) => updateFaq(index, e)}
