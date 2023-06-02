@@ -1,4 +1,0 @@
-import{j as e,bb as u,aA as x,bc as b}from"./index-45ef3337.js";const m=t=>{const{current:r,pageSize:n,total:i}=t,o=(s,l,a)=>{const d=s===r,c=Math.ceil((i??1)/(n??1));switch(l){case"page":return e.jsx("a",{rel:"nofollow",className:`flex h-full w-full items-center rounded border border-solid
-            border-[#EAEAEA] ${d?"bg-primary text-white":"bg-white"}`,children:s});case"prev":return r===1?null:e.jsxs("div",{className:`flex h-full items-center rounded border border-solid\r
-        border-[#EAEAEA] bg-white px-3`,children:[e.jsx(b,{})," Previous"]});case"next":return r===c?null:e.jsxs("div",{className:`flex h-full items-center rounded border border-solid\r
-          border-[#EAEAEA] bg-white px-3`,children:["Next ",e.jsx(x,{})]});default:return a}};return e.jsx(u,{showSizeChanger:!1,className:"custom-pagination",...t,itemRender:o})};export{m as C};
