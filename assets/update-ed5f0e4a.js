@@ -1,0 +1,1 @@
+import{al as e,j as s}from"./index-fd077130.js";import{r}from"./requireAuth-cdf57bc2.js";const a=()=>{const{id:t}=e();return s.jsxs(s.Fragment,{children:["User Incidents Update ",t]})},d=r(a);export{d as default};
