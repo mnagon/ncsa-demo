@@ -2,8 +2,10 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../contexts/useAuth";
 
-export const requireAdmin = (Component: React.FC) => {
-  return function AdminComponent() {
+export const requireAdmin = <P extends object>(
+  Component: React.ComponentType<P>
+) => {
+  const RequireAdmin: React.FC<P> = (props) => {
     const { user } = useAuth();
 
     if (!user) {
@@ -16,6 +18,8 @@ export const requireAdmin = (Component: React.FC) => {
       return <Navigate to="/404" />;
     }
 
-    return <Component />;
+    return <Component {...props} />;
   };
+
+  return RequireAdmin;
 };

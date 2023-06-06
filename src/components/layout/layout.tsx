@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import { AppBar } from "./app-bar/app-bar";
-import { Navigation } from "./navigation/navigation";
+import { Navigation } from "./navigation";
 import { HelpLayout } from "../help";
 
 type LayoutType = "auth" | "main" | "help";
@@ -9,7 +9,7 @@ type LayoutType = "auth" | "main" | "help";
 export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   const { pathname } = useLocation();
 
-  const layoutType = React.useMemo<LayoutType>(() => {
+  const layoutType = useMemo<LayoutType>(() => {
     switch (true) {
       case /^\/auth/.test(pathname):
         return "auth";

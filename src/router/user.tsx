@@ -17,6 +17,7 @@ const HelpFaqs = React.lazy(() => import("../pages/user/help/faqs"));
 const HelpContact = React.lazy(() => import("../pages/user/help/contact"));
 const HelpHowto = React.lazy(() => import("../pages/user/help/how-to"));
 const Account = React.lazy(() => import("../pages/user/account"));
+const ResetPassword = React.lazy(() => import("../pages/user/reset-password"));
 const APIKey = React.lazy(() => import("../pages/user/api-key"));
 const IOC = React.lazy(() => import("../pages/user/ioc"));
 
@@ -80,6 +81,11 @@ const userRouters: RouterType[] = [
     path: "account",
     element: <Account />,
     title: "User Account",
+  },
+  {
+    path: "reset-password",
+    element: <ResetPassword />,
+    title: "User Reset Password",
   },
   {
     path: "api-key",

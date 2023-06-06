@@ -25,8 +25,9 @@ const AdminHelpFaqs: React.FC = () => {
 
   const removeFaq = (index: number) => {
     setFaqs((prev) => {
-      prev.splice(index, 1);
-      return [...prev];
+      const updatedFaqs = [...prev];
+      updatedFaqs.splice(index, 1);
+      return updatedFaqs;
     });
   };
 

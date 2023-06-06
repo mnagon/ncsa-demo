@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Dropdown, Tooltip } from "antd";
 import type { MenuProps } from "antd";
 import Icon from "@ant-design/icons";
@@ -20,7 +20,7 @@ export const Navigation: React.FC = () => {
   const { pathname } = useLocation();
   const { user } = useAuth();
 
-  const isAdminPath = React.useMemo(() => {
+  const isAdminPath = useMemo(() => {
     return /^\/admin/.test(pathname);
   }, [pathname]);
 

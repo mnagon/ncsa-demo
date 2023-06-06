@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Space, Avatar, Dropdown, Tooltip } from "antd";
 import type { MenuProps } from "antd";
-import { Setting, API, Logout } from "./icons";
+import { Setting, API, Logout, Lock } from "./icons";
 import Icon, { UserOutlined } from "@ant-design/icons";
 import { useAuth } from "../../../../contexts/useAuth";
 
@@ -24,6 +24,15 @@ export const UserMenu: React.FC = () => {
           navigate("/account");
         },
         disabled: /^\/account/.test(pathname),
+      },
+      {
+        label: <span className="block py-1.5 font-normal">Reset password</span>,
+        key: "reset-password",
+        icon: <Icon component={Lock} />,
+        onClick: () => {
+          navigate("/reset-password");
+        },
+        disabled: /^\/reset-password/.test(pathname),
       },
       {
         label: (
